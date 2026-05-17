@@ -1,11 +1,11 @@
 site_name: IPT
-site_url: https://www.mkdocs.org/
+site_url: https://njoxpy.github.io/Project-Docs-IPT/
 site_description: IPT documentation with Markdown.
 site_author: NjoxPy
 
 # Repository
-# repo_name: repo name url
-# repo_url: link to docs repo url
+repo_name: Project-Docs-IPT
+repo_url: https://github.com/Njoxpy/Project-Docs-IPT
 # edit_uri: edit/main/docs/
 
 # navigation
@@ -22,7 +22,7 @@ nav:
   - maintenance-plan.md
 
 theme:
-  name: readthedocs
+  name: material
   features:
     - navigation.tabs
     - navigation.sections
