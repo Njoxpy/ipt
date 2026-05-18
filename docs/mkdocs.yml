@@ -20,36 +20,53 @@ nav:
   - deployment-plan.md
   - user-manual.md
   - maintenance-plan.md
+  - database: database/database.md
+  - Report: database/report.md
 
 theme:
   name: material
+  language: en
+  icon:
+    repo: fontawesome/brands/github
+    logo: material/book-open-page-variant
+  favicon: assets/favicon.png
   features:
+    - navigation.instant
+    - navigation.tracking
     - navigation.tabs
+    - navigation.tabs.sticky
     - navigation.sections
-    - toc.integrate
+    - navigation.expand
+    - navigation.path
     - navigation.top
+    - navigation.footer
+    - toc.follow
     - search.suggest
     - search.highlight
+    - search.share
     - content.tabs.link
-    - content.code.annotation
+    - content.code.annotate
     - content.code.copy
-  language: en
+    - content.tooltips
+    - content.action.edit
   palette:
-    - scheme: default
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
       toggle:
-        icon: material/toggle-switch-off-outline
+        icon: material/weather-night
         name: Switch to dark mode
-      primary: teal
-      accent: purple
-    - scheme: slate
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: light blue
       toggle:
-        icon: material/toggle-switch
+        icon: material/weather-sunny
         name: Switch to light mode
-      primary: teal
-      accent: lime
   font:
-    text: "Roboto"
-    code: "Roboto Mono"
+    text: Inter
+    code: JetBrains Mono
 # repo_url: https://github.com/mkdocs/mkdocs/
 # edit_uri: blob/master/docs/
 
@@ -65,20 +82,42 @@ extra:
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/in/godbless-nyagawa/
 
+plugins:
+  - search
+  - tags
+
 markdown_extensions:
-  - footnotes
-  - pymdownx.highlight:
-      linenums: true
-  - pymdownx.snippets
-  - pymdownx.keys
-  - pymdownx.inlinehilite
-  - pymdownx.superfences
-  - admonition
   - abbr
+  - admonition
   - attr_list
   - def_list
   - footnotes
   - meta
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.highlight:
+      linenums: true
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
 copyright: |
   &copy; 2024 <a href="https://github.com/Njoxpy" target="_blank" rel="noopener">Godbless Nyagawa(NjoxPy)</a>
