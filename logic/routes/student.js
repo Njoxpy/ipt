@@ -1,30 +1,20 @@
 // create a entry
-const express = require("express")
-const student = express.Router()
+const express = require("express");
+const {
+  GetLogs,
+  LogbookDocument,
+  GetLog,
+  DeleteLog,
+} = require("../controllers/student");
+const student = express.Router();
 
 // read entry
-student.get("/", (req, res) => {
-  res.status(200).json({message: "submission sucessfully"})
-})
+student.get("/", GetLogs);
 
-student.get("/:id", (req, res) => {
-  res.status(200).json({message: "submission sucessfully"})
-})
+student.get("/:id", GetLog);
 
+student.post("/", LogbookDocument);
 
-// submit
-student.post("/", (req, res) => {
-  res.status(201).json({message: "submission sucessfully"})
-})
+student.delete("/:id", DeleteLog);
 
-// update
-student.put("/", (req, res) => {
-  res.status(201).json({message: "submission sucessfully"})
-})
-
-// delete
-student.delete("/", (req, res) => {
-  res.status(201).json({message: "submission sucessfully"})
-})
-
-module.exports =  student;
+module.exports = student;
