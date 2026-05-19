@@ -22,6 +22,7 @@ nav:
   - maintenance-plan.md
   - database: database/database.md
   - Report: database/report.md
+  - api design: api/api.md
 
 theme:
   name: material
