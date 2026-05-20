@@ -34,6 +34,8 @@ The Digital Logbook System is designed to streamline the process of recording, m
 - **User Management**: Handles different user roles such as students, supervisors, and administrators.
 - **Notifications**: Sends reminders and notifications to students for timely entry submissions and to supervisors for pending reviews.
 
+![alt text](image.png)
+
 ## User Case
 
 ### Students

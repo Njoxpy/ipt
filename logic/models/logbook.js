@@ -14,7 +14,6 @@ const logbookSchema = new mongoose.Schema(
       ],
       required: [true, "Please enter day"],
     },
-    // name of student from request body and name of industry
     studentName: {
       type: String,
       required: [true, "Please enter name"],
@@ -30,9 +29,9 @@ const logbookSchema = new mongoose.Schema(
     },
     activities: {
       type: String,
-      required: [true, "Please enter activity sumamry of what you did"],
+      required: [true, "Please enter activity summary of what you did"],
       maxLength: [3000, "Enter maximum of not less than 3000 words"],
-      minLength: [300, "Enter maximum of not less than 3000 words"],
+      minLength: [300, "Enter maximum of not less than 300 words"],
     },
   },
   {
@@ -43,3 +42,6 @@ const logbookSchema = new mongoose.Schema(
 const Logbook = mongoose.model("logs", logbookSchema);
 
 module.exports = Logbook;
+
+//
+// marked? yes or true and by
