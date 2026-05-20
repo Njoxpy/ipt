@@ -34,3 +34,22 @@ const GetLog = async (req, res) => {
 ### error 3
 
 - `Cannot destructure property 'dayOfTheWeek' of 'req.body' as it is undefined.` I forgot to add `app.use(express.json());` into express js entry point
+
+### Error 4 20 May 2026
+
+- Forgot to pass `req.body` into the body
+
+```js
+//
+const summary = await WeekSummary.findByIdAndUpdate(id, {
+  new: true,
+  runValidators: true,
+});
+
+const summary = await WeekSummary.findByIdAndUpdate(id, req.body, {
+  new: true,
+  runValidators: true,
+});
+```
+
+for `new:true` change and use `returnDocument: "after",`
